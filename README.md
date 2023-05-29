@@ -226,14 +226,14 @@ retrieve-secret:
    - name: Read secrets from AWS Secrets Manager into environment variables
      uses: abhilash1in/aws-secrets-manager-action@v2.1.0
      with:
-       secrets: LIAU_SECRET_2
+       secrets: Alan_SECRET_2
        parse-json: false
 ```
 
 The last step added will print the value of *LIAU_SECRET_2*
 ```yml
 - name: Check if env variable is set after fetching secrets
-  run: if [ -z ${LIAU_SECRET_2+x} ]; then echo "LIAU_SECRET_2 is unset"; else echo "LIAU_SECRET_2 is set to '$LIAU_SECRET_2'"; fi
+  run: if [ -z ${Alan_SECRET_2+x} ]; then echo "Alan_SECRET_2 is unset"; else echo "Alan_SECRET_2 is set to '$Alan_SECRET_2'"; fi
 ```
 
 **secrets**:
